@@ -15,7 +15,7 @@ const PostPage = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/get_posts");
+      const response = await axios.get("https://tony-blog-site-5f1feed3cdc2.herokuapp.com/get_posts");
       const filteredPosts = response.data.filter(post => post.content.trim() !== ""); // Filter out posts with empty content
       setPosts(filteredPosts);
     } catch (error) {
@@ -28,7 +28,7 @@ const PostPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/create_post",
+        "https://tony-blog-site-5f1feed3cdc2.herokuapp.com/create_post",
         { content },
         { headers: { Authorization: `Bearer ${authToken}` } }
       );
