@@ -1,0 +1,73 @@
+/* .App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url(./components/pictures/211882.jpg);
+} */
+
+/* Shared form styles */
+/* .form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 180px;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+} */
+
+/* Individual page styles */
+.login-page, .register-page {
+  text-align: center; /* Center the content inside the page */
+}
+
+/* Label styles */
+.form-container label {
+  text-align: left; /* Align labels to the left */
+  padding: 0.25rem 0;
+  font-style: oblique;
+  font-family: FANTASY;
+  font-size: 25px;
+  text-shadow: white 5px 5px 3px;
+}
+
+/* Input styles */
+.form-container input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 80px;
+}
+
+/* Button styles */
+.form-container button {
+  border: none;
+  background-color: #4a00c9; /* Use the primary color for the background */
+  padding: 1rem 2rem;
+  border-radius: 80px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.7s cubic-bezier(1, -1.46, 0, 2.22);
+}
+
+.form-container button:hover {
+  background-color: #33009c; /* Darken the background color on hover */
+}
+
+/* Switch button styles */
+.switch-button {
+  background: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out; /* Add a smooth color transition */
+}
+
+.switch-button:hover {
+  color: #c49aff; /* Change color on hover */
+}
