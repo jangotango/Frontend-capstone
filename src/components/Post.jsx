@@ -46,7 +46,7 @@ const PostPage = () => {
 
   const handleDelete = async (postId) => {
     try {
-      await axios.delete(`http://localhost:5000/delete_post/${postId}`, {
+      await axios.delete(`https://tony-blog-site-5f1feed3cdc2.herokuapp.com/delete_post/${postId}`, {
         headers: { Authorization: `Bearer ${authToken}` },
       });
 
