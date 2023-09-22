@@ -109,8 +109,8 @@ const PostPage = () => {
       </div>
 
       {isAuthenticated() && (
-        <button>
-          <div className="logout-button" onClick={logout}>Logout</div></button>
+        <button className="logout-button" onClick={logout}>
+         Logout</button>
       )}
 
       {error && <p className="error-message">{error}</p>}
