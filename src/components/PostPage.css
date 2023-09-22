@@ -19,7 +19,7 @@
     align-items: center;
     background-image: url('./pictures/1322308.jpeg'); 
     background-color:beige;
-    height: 100vh;
+    height: 100%;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -129,4 +129,13 @@
     background-color: #4a0700;
   }
 
- 
+ .logout-button {    
+  background-color: #007bff;
+  border: none;
+  border-radius: 180px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 5px 10px;
+
+ }
