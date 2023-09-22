@@ -50,11 +50,17 @@
   }
   .post-textarea {
     font-family: 'Happy Monkey', cursive;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    font-size: 22px;
+    color: #27b1c9;
+    font-weight: bold;
+    display: grid;
+    justify-content: space-evenly;
+    list-style: none;
     margin-bottom: 10px;
-    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0, 0.5);
     
   }
   
@@ -87,18 +93,19 @@
     border: 1px solid #ccc;
     padding: 50px;
     border-radius: 10px;
+    background-color: rgba(0,0,0, 0.5);
   }
   
   .post-content {
     font-family: 'Happy Monkey', cursive;
     font-size: 22px;
-    color: honeydew;
-    background-color: #27b1c9;
+    color: #27b1c9;
+    font-weight: bold;
     margin-bottom: 10px;
   }
   
   .post-username {
-    color: #b4d3f4;
+    color:#27b1c9;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 5px;

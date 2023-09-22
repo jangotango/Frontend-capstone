@@ -8,7 +8,9 @@ export const Register = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
+ 
   const handleRegister = async (e) => {
     e.preventDefault();
 
@@ -24,58 +26,68 @@ export const Register = (props) => {
       localStorage.setItem('authToken', token);
       login(token);
 
-      // Redirect to protected route or handle in a different way
-      props.history.push("/protected-route");
+        // Show the success alert
+      setShowSuccessAlert(true);
+       // Display a success message using the alert box
+      alert("Thank you for registering!");
 
-    } catch (error) {
-      console.error("Registration failed:", error);
-      if (error.response) {
-        console.error("Response data:", error.response.data);
+       // Redirect to protected route or handle in a different way
+       props.history.push("/protected-route");
+      } catch (error) {
+        console.error("Registration failed:", error);
+        if (error.response) {
+          console.error("Response data:", error.response.data);
+          // Display an error message using the alert box
+          alert("The email has already been used.");
+        }
       }
-    }
-  };
-
-  return (
-    <div className="register-bg">
-      <div className="form-container">
-        <div className="kid-content">
-
-          <h1>Create Your Awesome Account!</h1>
-          <p>Join the adventure by registering your account</p>
-
-          <form className="register-page" onSubmit={handleRegister}>
-
-            <label htmlFor="email"> Email! </label>
-
-            <input
-              value={email}
-              type="email"
-              placeholder="Something Cool"
-              id="email"
-              name="email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-
-            <label htmlFor="password"> Password? </label>
-
-            <input
-              value={password}
-              type="password"
-              placeholder="**********"
-              id="password"
-              name="password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-
-            <button type="submit">Create Account</button>
-          </form>
-          
-          <Link to="/" className="switch-button">
-            <button type="submit">Already have an account? Log In!</button>
-          </Link>
-
+    };
+  
+    return (
+      <div className="register-bg">
+        <div className="form-container">
+          <div className="kid-content">
+            <h1>Create Your Awesome Account!</h1>
+            <p>Join the adventure by registering your account</p>
+           
+            {/* Conditionally render the success alert */}
+            {showSuccessAlert && (
+              <div className="alert alert-success" role="alert">
+                Thank you for registering!
+              </div>
+            )}
+    
+            <form className="register-page" onSubmit={handleRegister}>
+              <label htmlFor="email"> Email! </label>
+              <input
+                value={email}
+                type="email"
+                placeholder="Something Cool"
+                id="email"
+                name="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+    
+              <label htmlFor="password"> Password? </label>
+              <input
+                value={password}
+                type="password"
+                placeholder="**********"
+                id="password"
+                name="password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+    
+              <button type="submit">Create Account</button>
+            </form>
+            
+            <Link to="/" className="switch-button">
+              <button type="submit">Already have an account? Log In!</button>
+            </Link>
+    
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+    
 };

@@ -63,14 +63,14 @@ const PostPage = () => {
         
       <div className="banner">
         {isAuthenticated() ? (
-          <h1 className="banner-title">Welcome to Your Profile!</h1>
+          <h1 className="banner-title">Welcome to Tony Profile!</h1>
         ) : (
           <p>Please log in to view your profile.</p>
         )}
       </div>
       
       <div className="post-title">
-        Share something with Tony!
+        Leave a message for Tony!
       </div>
 
       <form className="post-form" onSubmit={handleCreatePost}>
@@ -79,10 +79,11 @@ const PostPage = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="Share your thoughts..."
-        ></textarea>
+        >
+        </textarea>
 
         <button className="post-button" onClick={handleCreatePost}>
-          Click here to post your thoughts
+          Click here to share!
         </button>
       </form>
 
