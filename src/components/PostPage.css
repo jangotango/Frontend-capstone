@@ -129,13 +129,16 @@
     background-color: #4a0700;
   }
 
- .logout-button {    
+ .logout-button {   
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   background-color: #007bff;
-  border: none;
   border-radius: 180px;
   color: #fff;
   cursor: pointer;
   font-weight: 700;
   padding: 5px 10px;
+  text-decoration: none;
 
  }

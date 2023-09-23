@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth } from "../authContext";
+import { Link } from "react-router-dom";
 import "./PostPage.css";
 
 const PostPage = () => {
-  const { authToken, isAuthenticated, logout } = useAuth();
+  const { authToken, isAuthenticated } = useAuth();
   const [content, setContent] = useState("");
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState("");
@@ -108,9 +109,11 @@ const PostPage = () => {
         </ul>
       </div>
 
+      
       {isAuthenticated() && (
-        <button className="logout-button" onClick={logout}>
-         Logout</button>
+        <Link to="/" className="logout-button">
+          Log Off
+        </Link>
       )}
 
       {error && <p className="error-message">{error}</p>}
